@@ -1,0 +1,11 @@
+char filename[260];
+char* ext;
+Get_Filename(FILE_IMAGE, filename);
+ext = strrchr(filename, '.');
+if (ext == NULL) return;
+if (!strcmp(ext, ".nd2")) return;
+if (!strcmp(ext, ".hgsb")) return;
+if (!strcmp(ext, ".ids")) return;
+strcpy(ext, ".nd2");
+if (ExistFile(filename)) return;
+ImageSaveAs(filename, 15, 0);

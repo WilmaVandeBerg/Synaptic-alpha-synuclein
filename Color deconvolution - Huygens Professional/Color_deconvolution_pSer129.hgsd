@@ -1,0 +1,15 @@
+# Huygens Deconvolution template file for pSer129
+# Format: nested Tcl-style list
+
+info {title {Deconvolution template} version 2.5 templateName Test_decon_ctr date {Fri Mar 17 11:00:27 CET 2023}}
+taskList {autocrop stabilize adjbl cmle:0 cmle:1 cmle:2 cmle:3 cmle:4 cmle:5 zdrift}
+autocrop {enabled 0}
+stabilize {enabled 0}
+adjbl {enabled 0 ni 0}
+cmle:0 {reduceMode auto psfMode auto psfPath {} it 40 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity 50.33 snr 5.00}
+cmle:1 {reduceMode auto psfMode auto psfPath {} it 32 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity 10.85 snr 7.70}
+cmle:2 {reduceMode auto psfMode auto psfPath {} it 1 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity -100.0 snr 11.00}
+cmle:3 {reduceMode auto psfMode auto psfPath {} it 30 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity 42.06 snr 4.20}
+cmle:4 {reduceMode auto psfMode auto psfPath {} it 4 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity -100.0 snr 3.20}
+cmle:5 {reduceMode auto psfMode auto psfPath {} it 4 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity -100.0 snr 2.50}
+zdrift {enabled 0 survey single chan 0 filter median filterSize 3}

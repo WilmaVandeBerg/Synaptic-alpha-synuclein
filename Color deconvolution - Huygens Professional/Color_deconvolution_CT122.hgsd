@@ -1,0 +1,18 @@
+# Huygens Deconvolution template file for CTT122
+# Format: nested Tcl-style list
+
+info {title {Deconvolution template} version 2.5 templateName CTT122_test_noASYN date {Fri Jul 28 15:09:29 CEST 2023}}
+taskList {autocrop stabilize adjbl crossTalk cmle:0 cmle:1 cmle:2 deconSkip:3 cmle:4 cmle:5 zdrift}
+autocrop {enabled 0 cropPath {}}
+stabilize {enabled 0 type auto objectiveAngle 45 stageMovement negX zSamplInterp axis}
+adjbl {enabled 0 ni 0}
+crossTalk {enabled 0 crossPath {}}
+cmle:0 {reduceMode auto psfMode auto psfPath {} it 40 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity 50 snr 7.80}
+cmle:1 {reduceMode auto psfMode auto psfPath {} it 32 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity 10 snr 7.70}
+cmle:2 {reduceMode auto psfMode auto psfPath {} it 1 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity -100.0 snr 11}
+deconSkip:3 {}
+cmle:4 {reduceMode auto psfMode auto psfPath {} it 4 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity -100.0 snr 3.2}
+cmle:5 {reduceMode auto psfMode auto psfPath {} it 4 q 0.01 bgMode lowest bgRadius 0.7 brMode auto varPsf off varPsfCnt 1 blMode off pad auto mode fast timeOut 10000 psfChan {} acuityMode on bg 0.0 acuity -100.0 snr 2.5}
+zdrift {enabled 0 survey single chan 0 filter median filterSize 3}
+
+
